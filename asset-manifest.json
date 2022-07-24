@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/notable/static/css/main.3ab5568d.css",
+    "main.js": "/notable/static/js/main.81983602.js",
+    "static/js/922.8f97bb6a.chunk.js": "/notable/static/js/922.8f97bb6a.chunk.js",
+    "service-worker.js": "/notable/service-worker.js",
+    "index.html": "/notable/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.3ab5568d.css",
+    "static/js/main.81983602.js"
+  ]
+}
