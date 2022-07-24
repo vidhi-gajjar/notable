@@ -2,7 +2,7 @@
   "name": "notes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dhruvangg.github.io/notes",
+  "homepage": "https://vidhi-gajjar.github.io/notable",
   "dependencies": {
     "@headlessui/react": "^1.6.3",
     "@testing-library/jest-dom": "^5.16.3",
