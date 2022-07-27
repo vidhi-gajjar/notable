@@ -2,8 +2,10 @@ import { Menu } from '@headlessui/react'
 import { useNoteContext } from "Contexts/NoteContext"
 
 export function NoteHeader({ data }) {
-    const { addUpdateMemo, updateNote, removeNote, cloneNote } = useNoteContext()
+    const { addUpdateMemo, addUpdateTask, updateNote, removeNote, cloneNote, getNoteById } = useNoteContext()
     const { noteId, title } = data
+
+    const currNote = getNoteById(noteId)
 
     const deleteNote = () => {
         if (window.confirm("Attention!! Are you sure?") === true) {
@@ -27,9 +29,12 @@ export function NoteHeader({ data }) {
                     <Menu.Item className="px-4 py-2 flex flex-row items-center border-b" as="div">
                         <button className='mr-2 text-sm w-full text-left' onClick={deleteNote}>Delete note</button>
                     </Menu.Item>
-                    <Menu.Item className="px-4 py-2 flex flex-row items-center border-b" as="div">
+                    {!currNote.hasOwnProperty("tasks") && <Menu.Item className="px-4 py-2 flex flex-row items-center border-b" as="div">
+                        <button className='mr-2 text-sm w-full text-left' onClick={e => addUpdateTask(noteId)}>Add Task</button>
+                    </Menu.Item>}
+                    {!currNote.hasOwnProperty("memo") && <Menu.Item className="px-4 py-2 flex flex-row items-center border-b" as="div">
                         <button className='mr-2 text-sm w-full text-left' onClick={e => addUpdateMemo(noteId)}>Add Memo</button>
-                    </Menu.Item>
+                    </Menu.Item>}
                     <Menu.Item className="px-4 py-2 flex flex-row items-center" as="div">
                         <button className='mr-2 text-sm w-full text-left' onClick={e => cloneNote(noteId)}>Make a Copy</button>
                     </Menu.Item>

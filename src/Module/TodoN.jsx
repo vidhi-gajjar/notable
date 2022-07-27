@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { TodoList, TodoForm, TodoInput, TodoHeader } from "../Components/Todo"
+import { TodoList, TodoForm, TodoInput, TodoHeader } from "../Components/TodoN"
 
 export default function Todo() {
     const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("todos")) || []);

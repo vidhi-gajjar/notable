@@ -61,12 +61,24 @@ export default function NoteProvider({ children }) {
             return newnotes
         })
     }
+    const addUpdateTask = (noteId, task = []) => {
+        setNotes((prevNotes) => {
+            const newnotes = [...prevNotes]
+            const note = newnotes.find(note => note.id === noteId)
+            note.tasks = task
+            return newnotes
+        })
+    }
 
     const cloneNote = (noteId) => {
         const newNotes = [...notes]
         const note = newNotes.find(note => note.id === noteId)
         newNotes.push({ ...note, id: uuidv4() })
         setNotes(newNotes)
+    }
+
+    const getNoteById = (noteId) => {
+        return notes.find(el => el.id === noteId)
     }
 
     const value = {
@@ -78,7 +90,9 @@ export default function NoteProvider({ children }) {
         updateTask,
         removeTask,
         addUpdateMemo,
-        notes
+        addUpdateTask,
+        notes,
+        getNoteById
     }
 
     useEffect(() => {
