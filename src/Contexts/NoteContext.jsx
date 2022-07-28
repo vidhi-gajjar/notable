@@ -9,19 +9,9 @@ export function useNoteContext() {
 
 export default function NoteProvider({ children }) {
     const [notes, setNotes] = useState(JSON.parse(localStorage.getItem("notes")) || [])
-    // const createNote = (title = 'New Note', tasks = []) => {
-    //     const newNote = {
-    //         id: uuidv4(),
-    //         title: title,
-    //         tasks: tasks,
-    //     }
-    //     setNotes((prevNotes) => [...prevNotes, newNote])
-    // }
 
     const createNote = (obj) => {
-        for (var key in obj) {
-            obj[key] === null && delete obj[key];
-        }
+        for (var key in obj) { obj[key] === null && delete obj[key]; }
         const newNote = { id: uuidv4(), ...obj }
         setNotes((prevNotes) => [...prevNotes, newNote])
     }
@@ -31,9 +21,7 @@ export default function NoteProvider({ children }) {
     }
 
     const removeNote = (id) => {
-        setNotes((prevNotes) => {
-            return prevNotes.filter(note => note.id !== id)
-        })
+        setNotes((prevNotes) => prevNotes.filter(note => note.id !== id))
     }
 
     const addTask = (id, text) => {
@@ -81,19 +69,7 @@ export default function NoteProvider({ children }) {
         return notes.find(el => el.id === noteId)
     }
 
-    const value = {
-        createNote,
-        updateNote,
-        removeNote,
-        cloneNote,
-        addTask,
-        updateTask,
-        removeTask,
-        addUpdateMemo,
-        addUpdateTask,
-        notes,
-        getNoteById
-    }
+    const value = { createNote, updateNote, removeNote, cloneNote, addTask, updateTask, removeTask, addUpdateMemo, addUpdateTask, notes, getNoteById }
 
     useEffect(() => {
         localStorage.setItem("notes", JSON.stringify(notes))
