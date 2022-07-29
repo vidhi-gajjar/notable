@@ -20,7 +20,7 @@ Simple Todo Progressive web application stores your data locally and can be inst
 
 ## Author
 
-- [@dhruvangg](https://github.com/dhruvangg)
+- [@dhruvangg](https://github.com/vidhi-gajjar)
 
 
 ## Support
