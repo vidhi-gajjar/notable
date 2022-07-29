@@ -1,13 +1,13 @@
-# Todo App
+# Notable App
 
-Simple Todo Progressive web application stores your data locally and can be installed on cross platforms. 
+Simple Todo with note functionality Progressive web application stores your data locally and can be installed on cross platforms. 
 
 
 ## Tech Stack
 
 **Client:** React, TailwindCSS
 
-**Server:** No Server Required
+**Server:** NodeJS for Build process (Development purpose only)
 
 
 ## Features
@@ -20,15 +20,15 @@ Simple Todo Progressive web application stores your data locally and can be inst
 
 ## Author
 
-- [@dhruvangg](https://github.com/vidhi-gajjar)
+- [@vidhi-gajjar](https://github.com/vidhi-gajjar)
 
 
 ## Support
 
-For support, email dhruvangg@gmail.com.
+For support, email vidhi.decay@gmail.com.
 
 
 ## Feedback
 
-If you have any feedback, please reach out to us at dhruvangg@gmail.com.
+If you have any feedback, please reach out to us at vidhi.decay@gmail.com.
 
