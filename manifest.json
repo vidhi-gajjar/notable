@@ -1,6 +1,6 @@
 {
-  "short_name": "Todo",
-  "name": "Todo App",
+  "short_name": "Notable",
+  "name": "Notable",
   "description": "Simple Todo App which stores tasks in locally",
   "icons": [
     {
